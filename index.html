@@ -13,157 +13,36 @@
 </head>
 
 <body>
-  <h1 class="m-3 text-center">Teaching Plan</h1>
-  <form action="javascript:void(0)">
-    <div class="form-group m-3">
-      <label for="courseName">Course</label>
-      <input type="text" class="form-control" id="courseName" placeholder="Enter course name">
-    </div>
-
-    <div class="form-group m-3">
-      <label for="instructorName">Instructor</label>
-      <input type="text" class="form-control" id="instructorName" placeholder="Enter instructor name">
-    </div>
-
-    <div class="form-group m-3">
-      <label for="mainGoal">Main Goal</label>
-      <textarea class="form-control" id="mainGoal" rows="3" placeholder="Enter the main goal of the course"></textarea>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="level">Level</label>
-      <select class="form-control" id="level">
-        <option value="basic">Basic</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="courseType">Course Type</label>
-      <select class="form-control" id="courseType">
-        <option value="theoretical">Theoretical</option>
-        <option value="practical">Practical</option>
-        <option value="theoreticalPractical">Theoretical-practical</option>
-      </select>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="targetAudience">Target Audience</label>
-      <input type="text" class="form-control" id="targetAudience" placeholder="Enter a target audience">
-      <button type="button" class="btn btn-primary mt-2" id="targetAudienceButton">Add Audience</button>
-      <div id="targetAudienceHelp" class="form-text">All target audiences will be shown below</div>
-
-      <ul id="targetAudienceListGroup">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.html">Form</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Logout</a>
+        </li>
       </ul>
     </div>
+  </nav>
 
-    <div class="form-group m-3">
-      <label for="requisite">Minimum Requisites</label>
-      <input type="text" class="form-control" id="requisite" placeholder="Enter a requisite">
-      <button type="button" class="btn btn-primary mt-2" id="requisiteButton">Add Requisite</button>
-      <div id="requisiteHelp" class="form-text">All requisites will be shown below</div>
+  <div class="jumbotron jumbotron-fluid p-5">
+    <h1 class="display-4">HackaFit</h1>
+    <p class="lead">A web application to facilitate the elaboration of content.</p>
+  </div>
 
-      <ul id="requisiteListGroup">
-      </ul>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="courseTotalHours">Total Hours</label>
-      <input type="number" class="form-control" id="courseTotalHours"
-        placeholder="Enter the total hours for this course">
-      <label for="dailyTime">Daily Time</label>
-      <div class="row">
-        <div class="col-6">
-          <input class="form-control" type="time" id="dailyStartTime">
-          <div id="dailyStartTimeHelp" class="form-text">Start Time</div>
-        </div>
-        <div class="col-6">
-          <input class="form-control" type="time" id="dailyEndTime">
-          <div id="dailyEndTimeHelp" class="form-text">End Time</div>
-        </div>
-      </div>
-      <label for="daysRange">Days Range</label>
-      <div class="row">
-        <div class="col-6">
-          <input class="form-control" type="date" id="daysRangeStart">
-          <div id="daysRangeStartHelp" class="form-text">Start Date</div>
-        </div>
-        <div class="col-6">
-          <input class="form-control" type="date" id="daysRangeEnd">
-          <div id="daysRangeEndHelp" class="form-text">End Date</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="attendeeNumber">Attendees Number</label>
-      <div class="row">
-        <div class="col-6">
-          <input type="number" class="form-control" id="minimumAttendee"
-            placeholder="Enter the minimum number of attendees this course">
-        </div>
-        <div class="col-6">
-          <input type="number" class="form-control" id="maximumAttendee"
-            placeholder="Enter the maximum number of attendees this course">
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="courseProgram">Course Program</label>
-      <input type="text" class="form-control" id="courseProgram" placeholder="Enter a course topic">
-      <button type="button" class="btn btn-primary mt-2" id="courseProgramButton">Add Program</button>
-      <div id="courseProgramHelp" class="form-text">All the programmation will be shown below</div>
-
-      <ul id="courseProgramListGroup">
-      </ul>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="tools">Tools</label>
-      <input type="text" class="form-control" id="tools" placeholder="Enter a necessary tool for this course">
-      <button type="button" class="btn btn-primary mt-2" id="toolsButton">Add Tool</button>
-      <div id="toolsHelp" class="form-text">All the necessary tools will be shown below</div>
-
-      <ul id="toolsListGroup">
-      </ul>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="methodology">Methodology</label>
-      <textarea class="form-control" id="methodology" rows="3"
-        placeholder="Enter the methodology that will be used in this course"></textarea>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="evaluationProcess">Evaluation Process</label>
-      <input type="text" class="form-control" id="evaluationProcess"
-        placeholder="Enter a evaluation process for this course">
-      <button type="button" class="btn btn-primary mt-2" id="evaluationProcessButton">Add Evaluation Process</button>
-      <div id="evaluationProcessHelp" class="form-text">All the evaluation processes will be shown below</div>
-
-      <ul id="evaluationProcessListGroup">
-      </ul>
-    </div>
-
-    <div class="form-group m-3">
-      <label for="bibliography">Bibliography</label>
-      <textarea class="form-control" id="bibliography" rows="3"
-        placeholder="Enter the bibliography that is used for this course"></textarea>
-    </div>
-
-    <div class="form-group m-3">
-      <div class="row">
-        <button type="submit" class="btn btn-primary mx-auto" style="width: 33%;">Submit</button>
-      </div>
-    </div>
-  </form>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="resources/js/main.js"></script>
 </body>
 
