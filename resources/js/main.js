@@ -53,4 +53,33 @@ $(document).ready(function () {
       return false;
     });
   });
+
+  // toast functions
+  $('#formButton').click(function () {
+    courseName = $('#courseName').val();
+
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-top-left",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "200",
+      "hideDuration": "200",
+      "timeOut": "1500",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+
+    toastr["success"](`${courseName} added`, "Sucess");
+
+    window.setTimeout(function () {
+      window.location.href = "index.html";
+    }, 1500);
+  });
 });
