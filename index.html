@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="resources/css/style.css">
+
+  <title>HackaFit</title>
+</head>
+
+<body>
+  <h1 class="m-3 text-center">Teaching Plan</h1>
+  <form>
+    <div class="form-group m-3">
+      <label for="courseName">Course</label>
+      <input type="text" class="form-control" id="courseName" placeholder="Enter course name">
+    </div>
+
+    <div class="form-group m-3">
+      <label for="instructorName">Instructor</label>
+      <input type="text" class="form-control" id="instructorName" placeholder="Enter instructor name">
+    </div>
+
+    <div class="form-group m-3">
+      <label for="mainGoal">Main Goal</label>
+      <textarea class="form-control" id="mainGoal" rows="3" placeholder="Enter the main goal of the course"></textarea>
+    </div>
+
+    <div class="form-group m-3">
+      <label>Level</label><br>
+
+      <input type="radio" id="basic" name="level" value="basic">
+      <label for="basic">Basic</label><br>
+
+      <input type="radio" id="intermediate" name="level" value="intermediate">
+      <label for="intermediate">Intermediate</label><br>
+
+      <input type="radio" id="advanced" name="level" value="advanced">
+      <label for="advanced">Advanced</label>
+    </div>
+
+    <div class="form-group m-3">
+      <label>Course Type</label><br>
+
+      <input type="radio" id="theoretical" name="courseType" value="theoretical">
+      <label for="theoretical">Theoretical</label><br>
+
+      <input type="radio" id="practical" name="courseType" value="practical">
+      <label for="practical">Practical</label><br>
+
+      <input type="radio" id="theoreticalPractical" name="courseType" value="theoreticalPractical">
+      <label for="theoreticalPractical">Theoretical-practical</label>
+    </div>
+
+    <div class="form-group m-3">
+      <label for="targetAudience">Target Audience</label>
+      <input type="text" class="form-control" id="targetAudience" placeholder="Enter a target audience">
+      <button type="button" class="btn btn-primary mt-2" id="targetAudienceButton">Add Audience</button>
+      <div id="targetAudienceHelp" class="form-text">All target audiences will be shown below, click in any item to remove.</div>
+
+      <ul id="targetAudienceListGroup">
+      </ul>
+    </div>
+
+    <div class="form-group m-3">
+      <label for="requisite">Minimum Requisites</label>
+      <input type="text" class="form-control" id="requisite" placeholder="Enter a requisite">
+      <button type="button" class="btn btn-primary mt-2" id="requisiteButton">Add Requisite</button>
+      <div id="requisiteHelp" class="form-text">All requisites will be shown below, click in any item to remove.</div>
+
+
+      <ul id="requisiteListGroup">
+      </ul>
+    </div>
+
+    <button type="submit" class="btn btn-primary m-3">Submit</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="resources/js/main.js"></script>
+</body>
+
+</html>
